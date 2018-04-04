@@ -6,7 +6,6 @@ vue
 文件名        对应模块  
 
 hello.html    介绍    
-
                 Vue.js 是什么
                 起步＜/br＞
                 声明式渲染＜/br＞
