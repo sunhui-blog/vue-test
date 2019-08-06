@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <father></father>
+    </div>
+    <script>
+      Vue.component('father', {
+        template:
+          '<div class="father">' +
+          '<h3>这里是父组件</h3>' +
+          '<child>' +
+          '<div class="tmpl" slot="down">' +
+          '<span>父组件插槽内容1</span>' +
+          '<span>父组件插槽内容2</span>' +
+          '</div>' +
+          '<div class="tmpl" slot="header">' +
+          '<span>header父组件插槽内容1</span>' +
+          '<span>header父组件插槽内容2</span>' +
+          '</div>' +
+          '</child>' +
+          '</div>'
+      });
+
+      Vue.component('child', {
+        data: function() {
+          return {
+            data: ['zhangsan', 'lisi', 'wanwu', 'zhaoliu', 'tianqi', 'xiaoba']
+          };
+        },
+        template:
+          '<div class="child">' +
+          '<slot name="header"></slot>' +
+          '<h3>这里是子组件</h3>' +
+          '<slot name="down"></slot>' +
+          '</div>'
+      });
+
+      // 创建根实例
+      new Vue({
+        el: '#app'
+      });
+    </script>
+  </body>
+</html>
