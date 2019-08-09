@@ -1,0 +1,28 @@
+{
+  "name": "vue-test",
+  "version": "1.0.0",
+  "description": "vue 参考 https://cn.vuejs.org 进行系列练习",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.0.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunhui-blog/vue-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunhui-blog/vue-test/issues"
+  },
+  "homepage": "https://github.com/sunhui-blog/vue-test#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
